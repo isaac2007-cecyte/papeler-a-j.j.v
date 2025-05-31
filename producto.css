@@ -1,0 +1,464 @@
+:root{
+    --azulito:#00bfff;
+    --azul:#0000cd;
+    --blanco:#ffffff;
+    --texto:#000000;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,*:after{
+    box-sizing: inherit;
+}
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    font-size: 16px;
+    background-color: var(--blanco);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 280vh;
+}
+hr{
+  padding: 1.5rem;
+}
+
+h1{
+  color:var(--texto);
+  text-align: center;
+  padding: 2rem;
+}
+
+/*barara de navegacion inicio*/
+nav{
+    background:var(--texto);
+    height: 100px;
+    width: 100%;
+}
+.nombre{
+    position:absolute;
+    padding:0 auto;
+    color:var(--blanco);
+    font-size: 40PX;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color:var(--blanco);
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    border: 2px solid var(--blanco);
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color:var(--blanco);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+/*fin de la barra de navegacion*/
+/*imagen hero inicio*
+.hero{
+    background-image: url(../productos/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 60rem;
+}
+
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0,0,0,0);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.division{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido-hero h2{
+  color: var(--blanco);
+  font-weight: bold;
+}
+.contenido-hero p{
+    color: var(--blanco);
+    font-weight: bold;
+    text-align: justify;
+}
+/*fin de la imagen hero*/
+
+.contenedor{
+    max-width: 1200px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    contain: paint;
+}
+.contenedor .contenedor-items{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-gap:30px;
+    grid-row-gap: 30px;
+    width: 100%;
+    transition: .3s;
+}
+.contenedor .contenedor-items .item{
+    max-width: 200px;
+    margin: auto;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px;
+    transition: .3s;
+}
+.contenedor .contenedor-items .item .img-item{
+    width: 100%;
+}
+.contenedor .contenedor-items .item:hover{
+    box-shadow: 0 0 11px var(--azulito);
+    scale: 1.05;
+}
+.contenedor .contenedor-items .item .titulo-item{
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contenedor .contenedor-items .item .precio-item{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.contenedor .contenedor-items .item .boton-item{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: var(--azulito);
+    color: var(--blanco);
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* seccion carrito */
+h2{
+    color: var(--blanco);
+}
+.carrito{
+    border: 2px solid var(--azulito);
+    width: 35%;
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: auto;
+    position: sticky !important;
+    top: 0;
+    transition: .3s;
+    margin-right: -100%;
+    opacity: 0;
+}
+.carrito .header-carrito{
+    background-color: var(--texto);
+    color:var(--texto);
+    text-align: center;
+    padding: 30px 0;
+}
+.carrito .carrito-item{
+    display: flex;
+    align-items: center;    
+    position: relative;
+    border-bottom: 1px solid var(--azulito);
+    padding: 20px;
+}
+.carrito .carrito-item img{
+    margin-right: 20px;
+}
+.carrito .carrito-item .carrito-item-titulo{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.carrito .carrito-item .selector-cantidad{
+    display: inline-block;
+    margin-right: 25px;
+}
+.carrito .carrito-item .carrito-item-cantidad{
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    display: inline-block;
+    width:30px;
+    padding: 5px;
+    text-align: center;
+}
+.carrito .carrito-item .selector-cantidad i{
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid var(--texto);
+    cursor: pointer;
+}
+.carrito .carrito-item .carrito-item-precio{
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.carrito .carrito-item .btn-eliminar{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: var(--blanco);
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    cursor: pointer;
+    display: block;
+    background: transparent;
+    z-index: 20;
+}
+.carrito .carrito-item .btn-eliminar i{
+    pointer-events: none;
+}
+
+.carrito-total{
+    background-color: var(--blanco);
+    padding: 30px;
+}
+.carrito-total .fila{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.carrito-total .btn-pagar{
+    display: block;
+    width: 100%;
+    border: none;
+    background: var(--texto);
+    color: var(--blanco);
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+.carrito-total .btn-pagar:hover{
+    scale: 1.05;
+}
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width: 850px) {
+    .contenedor {
+      display: block;
+    }
+    .contenedor-items{
+        width: 100% !important;
+    }
+    .carrito{
+        width: 100%;
+    }
+  }
+
+  /*pie de pagina*/
+  footer{
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	background:var(--texto);
+	position: absolute;
+	bottom: 0%;
+	width: 100%;
+  }
+  .main-content{
+	display: flex;
+	color:var(--blanco);
+  }
+  .main-content .box{
+	flex-basis: 50%;
+	padding: 10px 20px;
+  }
+  .box h2{
+	font-size: 2rem;
+	font-weight: 600;
+	text-transform: uppercase;
+  }
+
+  .box .content{
+	margin: 20px 0 0 0;
+	position: relative;
+  }
+  .box .content:before{
+	position: absolute;
+	content: '';
+	top: -10px;
+	height: 2px;
+	width: 100%;
+	background: var(--blanco);
+  }
+  .box .content:after{
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 15%;
+	background:var(--azulito);
+	top: -10px;
+  }
+  .left .content p{
+	text-align: justify;
+  }
+  .left .content .social{
+	margin: 20px 0 0 0;
+  }
+  .left .content .social a{
+	padding: 0 2px;
+  }
+  .left .content .social a svg{
+	height: 50px;
+	width: 50px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 5px;
+	transition: 0.3s;
+  }
+  .left .content .social a svg:hover{
+	background: var(--azulito);
+  }
+  .center .content .fas{
+	font-size: 1.5rem;
+	background:var(--blanco);
+	height: 45rem;
+	width: 45rem;
+	line-height: 45px;
+	text-align: center;
+	border-radius: 50%;
+	transition: 0.3s;
+	cursor: pointer;
+  }
+  .center .content .fas:hover{
+	background: var(--azulito);
+  }
+  .center .content .text{
+	font-size: 1.5rem;
+	font-weight: 500;
+	padding-left: 10px;
+  }
+  .center .content .phone{
+	margin: 15px 0;
+  }
+  .right form .text{
+	font-size: 1.5rem;
+	margin-bottom: 2px;
+	color:var(--blanco);
+  }
+  .right form .msg{
+	margin-top: 10px;
+  }
+  .right form input, .right form textarea{
+	width: 100%;
+	font-size: 1.5rem;
+	background:var(--blanco);
+	padding-left: 10px;
+	border: 1px solid var(--azulito);
+  }
+  .right form input:focus,
+  .right form textarea:focus{
+	outline-color: var(--azulito);
+  }
+  .right form input{
+	height: 35px;
+  }
+  .right form .btn{
+	margin-top: 10px;
+  }
+  .right form .btn button{
+	height: 40px;
+	width: 100%;
+	border: none;
+	outline: none;
+	background: var(--azulito);
+	font-size: 1.5rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: .3s;
+  }
+  .right form .btn button:hover{
+	background:var(--texto);
+  }
+  .bottom center{
+	padding: 5px;
+	font-size: 1rem;
+	background:var(--texto);
+  }
+  .bottom center span{
+	color:var(--blanco);
+  }
+  .bottom center a{
+	color: var(--azulito);
+	text-decoration: none;
+  }
+  .bottom center a:hover{
+	text-decoration: underline;
+  }
+  @media screen and (max-width: 900px) {
+	footer{
+	  position: relative;
+	  bottom: 0px;
+	}
+	.main-content{
+	  flex-wrap: wrap;
+	  flex-direction: column;
+	}
+	.main-content .box{
+	  margin: 5px 0;
+	}
+  }

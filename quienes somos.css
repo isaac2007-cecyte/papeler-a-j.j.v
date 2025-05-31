@@ -1,0 +1,360 @@
+:root{
+    --azulito:#00bfff;
+    --azul:#0000cd;
+    --blanco:#ffffff;
+    --texto:#000000;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px;
+    background-color: var(--texto);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 280vh;
+}
+@media(min-width:480px){
+  body{
+    background-color: var(--texto);
+  }
+}
+@media(min-width:768px){
+  body{
+    background-color: var(--texto);
+  }
+}
+hr{
+  padding: 1.3rem;
+}
+h2{
+  color:var(--texto);
+  text-align: center;
+}
+
+/*barara de navegacion inicio*/
+nav{
+    background:var(--texto);
+    height: 100px;
+    width: 100%;
+}
+.nombre{
+    position:absolute;
+    padding:0 auto;
+    color:var(--blanco);
+    font-size: 40PX;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color:var(--blanco);
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    border: 2px solid var(--blanco);
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color:var(--blanco);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+/*fin de la barra de navegacion*/
+
+/*bara de navgacion extra*/
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: #dfc38a;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+h1.dividir{ 
+    text-align: center;
+}
+.separador{
+    display: flex;
+    justify-content:center ;
+}
+
+/*fin del extra de la barra de navegacion*/
+.row{
+    width: 80%;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    overflow-x: hidden;
+    padding: 4rem 0;
+}
+.row .imgWrapper{
+    overflow: hidden;
+}
+.row .imgWrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+.row .imgWrapper:hover img{
+    transform: scale(1.25);
+}
+.row .contentWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+}
+.row .contentWrapper span.textWrapper{
+    display: block;
+    font-size: 20px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: var(--blanco);
+}
+.row .contentWrapper span.textWrapper span{
+    display: inline-block;
+    background: var(--blanco);
+    width: 70px;
+    height: 5px;
+}
+.row .contentWrapper h2{
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--blanco);
+    padding-bottom: 20px;
+}
+.row .contentWrapper p{
+    font-size: 14px;
+    line-height: 25px;
+    padding-bottom: 25px;
+    color:var(--blanco);
+    text-align: justify;
+}
+.row .contentWrapper a{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: var(--azulito);
+    color: var(--blanco);
+    padding: 15px 40px;
+    letter-spacing: 1px;
+    user-select: none;
+}
+footer{
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	background:var(--texto);
+	position: absolute;
+	bottom: 0%;
+	width: 100%;
+  }
+  .main-content{
+	display: flex;
+	color:var(--blanco);
+  }
+  .main-content .box{
+	flex-basis: 50%;
+	padding: 10px 20px;
+  }
+  .box h2{
+	font-size: 2rem;
+	font-weight: 600;
+	text-transform: uppercase;
+  }
+
+  .box .content{
+	margin: 20px 0 0 0;
+	position: relative;
+  }
+  .box .content:before{
+	position: absolute;
+	content: '';
+	top: -10px;
+	height: 2px;
+	width: 100%;
+	background: var(--blanco);
+  }
+  .box .content:after{
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 15%;
+	background:var(--azulito);
+	top: -10px;
+  }
+  .left .content p{
+	text-align: justify;
+  }
+  .left .content .social{
+	margin: 20px 0 0 0;
+  }
+  .left .content .social a{
+	padding: 0 2px;
+  }
+  .left .content .social a svg{
+	height: 50px;
+	width: 50px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 5px;
+	transition: 0.3s;
+  }
+  .left .content .social a svg:hover{
+	background: var(--azulito);
+  }
+  .center .content .fas{
+	font-size: 1.5rem;
+	background:var(--blanco);
+	height: 45rem;
+	width: 45rem;
+	line-height: 45px;
+	text-align: center;
+	border-radius: 50%;
+	transition: 0.3s;
+	cursor: pointer;
+  }
+  .center .content .fas:hover{
+	background: var(--azulito);
+  }
+  .center .content .text{
+	font-size: 1.5rem;
+	font-weight: 500;
+	padding-left: 10px;
+  }
+  .center .content .phone{
+	margin: 15px 0;
+  }
+  .right form .text{
+	font-size: 1.5rem;
+	margin-bottom: 2px;
+	color:var(--blanco);
+  }
+  .right form .msg{
+	margin-top: 10px;
+  }
+  .right form input, .right form textarea{
+	width: 100%;
+	font-size: 1.5rem;
+	background:var(--blanco);
+	padding-left: 10px;
+	border: 1px solid var(--azulito);
+  }
+  .right form input:focus,
+  .right form textarea:focus{
+	outline-color: var(--azulito);
+  }
+  .right form input{
+	height: 35px;
+  }
+  .right form .btn{
+	margin-top: 10px;
+  }
+  .right form .btn button{
+	height: 40px;
+	width: 100%;
+	border: none;
+	outline: none;
+	background: var(--azulito);
+	font-size: 1.5rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: .3s;
+  }
+  .right form .btn button:hover{
+	background:var(--texto);
+  }
+  .bottom center{
+	padding: 5px;
+	font-size: 1rem;
+	background:var(--texto);
+  }
+  .bottom center span{
+	color:var(--blanco);
+  }
+  .bottom center a{
+	color: var(--azulito);
+	text-decoration: none;
+  }
+  .bottom center a:hover{
+	text-decoration: underline;
+  }
+  @media screen and (max-width: 900px) {
+	footer{
+	  position: relative;
+	  bottom: 0px;
+	}
+	.main-content{
+	  flex-wrap: wrap;
+	  flex-direction: column;
+	}
+	.main-content .box{
+	  margin: 5px 0;
+	}
+  }
