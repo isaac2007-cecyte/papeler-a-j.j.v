@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preload" href="css/normalizar.css" as="style">
+    <link rel="stylesheet" href="css/normalizar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/index.css" as="style">
+    <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <title>Papeleria J.J.V</title>
+</head>
+<body>
+  <div class="navbar rejilla-3">
+    <form class="search-bar" action="#" method="GET">
+      <input type="text" name="buscar" placeholder="Buscar productos, servicios...">
+      <button type="submit">🔍</button>
+    </form>
+  </div>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="nombre">
+                 <P>Papeleria J.J.V</P>
+            </div>
+            <ul>
+                <li><a class="active" href="index.html">INICIO</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="quienes somos.html">Quiénes somos</a></li>
+                <li><a href="contacto.html">Contactanos</a></li>
+            </ul>
+        </nav>
+        <hr width="98%" color="#0000cd">
+        <section>
+            <div class="hero">
+                <div class="contenido-hero">
+                    <h2>"El arte de escribir y dibujar, al alcance de tus manos"</h2>
+                <div class="division">
+                  <img src="data:image/png;base64,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" alt="place-marker">
+                  <p>Simón Sarlat , Calle Benito Juaréz.</p>
+                </div>
+                </div>
+            </div>
+        </section>
+     </header>
+     <main class="index">
+      <!--Tarjetas-inicio-->
+      <section>
+            <h2>QUIENES SOMOS</h2>
+            <div class="rejilla">
+              <div class="container-card">
+              <div class="card">
+                <div class="contenido-card">
+                  <h3>ACERCA DE J.J.V</h3>
+                  <p>En J.J.V, creemos que cada hoja en blanco es una oportunidad para crear, soñar y construir. Conocénos , no te arrepentirás.combinamos años de experiencia con una constante actualización y un genuino interés.</p>
+                  <a href="quienes somos.html">Leer Más</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="contenido-card">
+                  <h3>QUIENES SOMOS?</h3>
+                  <p>En Papelería J.J.V Nacimos con la idea de brindar un espacio donde cada persona pueda encontrar lo que necesita para estudiar, trabajar, organizarse o simplemente dejar volar su imaginación.</p>
+                  <a href="quienes somos.html">Leer Más</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="contenido-card">
+                  <h3>NUESTRA MISION</h3>
+                  <p>En Papelería J.J.V, nuestra misión es ofrecer productos de papelería, oficina y regalos que inspiren la creatividad, apoyen el aprendizaje y faciliten la organización diaria de nuestros clientes.</p>
+                  <a href="quienes somos.html">Leer Más</a>
+                </div>
+              </div>
+            </div>
+            </div>
+<!--Fin   Tarjetas-->
+<!--inicion de servicios-->
+            <div class="rejilla-2">
+              <h2>SERVICOS</h2>
+            <section class="galaeria">
+              <div class="Galeria">
+                <div class="fotos">
+                  <a href="servicios.html"><img src="index/1.jpg"></a>
+                </div>
+                <div class="pie">
+                  <p>Fotocopias e impresiones</p>
+                </div>
+              </div>
+              <div class="Galeria">
+                <div class="fotos">
+                  <a href="servicios.html"><img src="index/2.jpeg"></a>
+                </div>
+                <div class="pie">
+                  <p>Impresión de tareas y documentos.</p>
+                </div>
+              </div>
+              <div class="Galeria">
+                <div class="fotos">
+                  <a href="servicios.html"><img src="index/5.png"></a>
+                </div>
+                <div class="pie">
+                  <p>Anillado y Empastado o metálico.</p>
+                </div>
+              </div>
+              <div class="Galeria">
+                <div class="fotos">
+                  <a href="servicios.html"><img src="index/6.jpeg"></a>
+                </div>
+                <div class="pie">
+                  <p>Plastificado De documentos.</p>
+                </div>
+              </div>
+              <div class="Galeria">
+                <div class="fotos">
+                  <a href="servicios.html"><img src="index/8.png"></a>
+                </div>
+                <div class="pie">
+                  <p>Clases de Técnicas de caligrafía</p>
+                </div>
+              </div>
+            </section>
+            </div>
+<!--fin de la galeria-->
+     </main>
+<!--inicio de pie depagina-->
+<footer class="pie">
+  <div class="main-content">
+    <div class="left box">
+      <h3>SOBRE NOSOTROS</h3>
+    <div class="content">
+     <p>"En Papelería J.J.V, cuidamos cada detalle porque sabemos que detrás de cada hoja, cada tinta y cada herramienta, hay una idea que merece lo mejor. Combinamos experiencia, innovación y un trato personalizado para ofrecerte soluciones a tu medida. Aquí no solo encuentras papelería: encuentras aliados para tus proyectos."</p>
+    <div class="social">
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+<defs><linearGradient x1="37.646" y1="14.5" x2="37.646" y2="56.878" gradientUnits="userSpaceOnUse" id="color-1_44003_gr1"><stop offset="0" stop-color="#00bfff"></stop><stop offset="1" stop-color="#0000cd"></stop></linearGradient><linearGradient x1="32" y1="6.833" x2="32" y2="58.017" gradientUnits="userSpaceOnUse" id="color-2_44003_gr2"><stop offset="0" stop-color="#00bfff"></stop><stop offset="1" stop-color="#0000cd"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(4,4)"><path d="M42,56v-18h5.358l0.934,-8h-6.292v-4.457c0,-2.097 -0.131,-3.527 2.877,-3.527l3.123,-0.002v-6.479c-1,-0.088 -2.487,-0.285 -5.136,-0.285c-5.531,0 -8.864,3.376 -8.864,9.576v5.174h-7v8h7v18z" fill="url(#color-1_44003_gr1)"></path><path d="M50,57h-36c-3.859,0 -7,-3.141 -7,-7v-36c0,-3.859 3.141,-7 7,-7h36c3.859,0 7,3.141 7,7v36c0,3.859 -3.141,7 -7,7zM14,9c-2.757,0 -5,2.243 -5,5v36c0,2.757 2.243,5 5,5h36c2.757,0 5,-2.243 5,-5v-36c0,-2.757 -2.243,-5 -5,-5z" fill="url(#color-2_44003_gr2)"></path></g></g>
+</svg></a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+<defs><linearGradient x1="32" y1="9" x2="32" y2="55" gradientUnits="userSpaceOnUse" id="color-1_bG29Ckcdp6YP_gr1"><stop offset="0" stop-color="#00bfff"></stop><stop offset="1" stop-color="#0000cd"></stop></linearGradient><linearGradient x1="32" y1="13" x2="32" y2="51" gradientUnits="userSpaceOnUse" id="color-2_bG29Ckcdp6YP_gr2"><stop offset="0" stop-color="#00bfff"></stop><stop offset="1" stop-color="#0000cd"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(4,4)"><path d="M49,55h-34c-3.309,0 -6,-2.691 -6,-6v-34c0,-3.309 2.691,-6 6,-6h34c3.309,0 6,2.691 6,6v34c0,3.309 -2.691,6 -6,6zM15,11c-2.206,0 -4,1.794 -4,4v34c0,2.206 1.794,4 4,4h34c2.206,0 4,-1.794 4,-4v-34c0,-2.206 -1.794,-4 -4,-4z" fill="url(#color-1_bG29Ckcdp6YP_gr1)"></path><path d="M26.978,22l14.108,20h-3.063l-14.109,-20zM51,15v34c0,1.1 -0.9,2 -2,2h-34c-1.1,0 -2,-0.9 -2,-2v-34c0,-1.1 0.9,-2 2,-2h34c1.1,0 2,0.9 2,2zM44.914,44l-10.125,-14.387l8.211,-9.613h-2.5l-6.841,8.009l-5.637,-8.009h-7.937l9.222,13.103l-9.307,10.897h2.5l7.937,-9.292l6.541,9.292z" fill="url(#color-2_bG29Ckcdp6YP_gr2)"></path></g></g>
+</svg></a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+<defs><linearGradient x1="32" y1="6.667" x2="32" y2="57.872" gradientUnits="userSpaceOnUse" id="color-1_43625_gr1"><stop offset="0" stop-color="#00bfff"></stop><stop offset="1" stop-color="#0000cd"></stop></linearGradient><linearGradient x1="32" y1="18.167" x2="32" y2="45.679" gradientUnits="userSpaceOnUse" id="color-2_43625_gr2"><stop offset="0" stop-color="#00bfff"></stop><stop offset="1" stop-color="#0000cd"></stop></linearGradient><linearGradient x1="46" y1="12.75" x2="46" y2="23.049" gradientUnits="userSpaceOnUse" id="color-3_43625_gr3"><stop offset="0" stop-color="#00bfff"></stop><stop offset="1" stop-color="#0000cd"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(4,4)"><path d="M44,57h-24c-7.168,0 -13,-5.832 -13,-13v-24c0,-7.168 5.832,-13 13,-13h24c7.168,0 13,5.832 13,13v24c0,7.168 -5.832,13 -13,13zM20,9c-6.065,0 -11,4.935 -11,11v24c0,6.065 4.935,11 11,11h24c6.065,0 11,-4.935 11,-11v-24c0,-6.065 -4.935,-11 -11,-11z" fill="url(#color-1_43625_gr1)"></path><path d="M32,45c-7.168,0 -13,-5.832 -13,-13c0,-7.168 5.832,-13 13,-13c7.168,0 13,5.832 13,13c0,7.168 -5.832,13 -13,13zM32,23c-4.962,0 -9,4.038 -9,9c0,4.963 4.038,9 9,9c4.963,0 9,-4.037 9,-9c0,-4.962 -4.037,-9 -9,-9z" fill="url(#color-2_43625_gr2)"></path><path d="M46,15c-1.65685,0 -3,1.34315 -3,3c0,1.65685 1.34315,3 3,3c1.65685,0 3,-1.34315 3,-3c0,-1.65685 -1.34315,-3 -3,-3z" fill="url(#color-3_43625_gr3)"></path></g></g>
+</svg></span></a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+<defs><linearGradient x1="32" y1="7.766" x2="32" y2="56.935" gradientUnits="userSpaceOnUse" id="color-1_KeTtCQ_b-ZiV_gr1"><stop offset="0" stop-color="#00bfff"></stop><stop offset="1" stop-color="#0000cd"></stop></linearGradient><linearGradient x1="33" y1="19.34" x2="33" y2="44.448" gradientUnits="userSpaceOnUse" id="color-2_KeTtCQ_b-ZiV_gr2"><stop offset="0" stop-color="#00bfff"></stop><stop offset="1" stop-color="#0000cd"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(4,4)"><path d="M51,8h-38c-2.757,0 -5,2.243 -5,5v38c0,2.757 2.243,5 5,5h38c2.757,0 5,-2.243 5,-5v-38c0,-2.757 -2.243,-5 -5,-5zM54,51c0,1.654 -1.346,3 -3,3h-38c-1.654,0 -3,-1.346 -3,-3v-38c0,-1.654 1.346,-3 3,-3h38c1.654,0 3,1.346 3,3z" fill="url(#color-1_KeTtCQ_b-ZiV_gr1)"></path><path d="M44,24c-3.309,0 -6,-2.691 -6,-6h-4v19c0,2.757 -2.243,5 -5,5c-2.757,0 -5,-2.243 -5,-5c0,-2.757 2.243,-5 5,-5c0.342,0 0.677,0.035 1,0.101v-4.042c-0.329,-0.037 -0.662,-0.059 -1,-0.059c-4.963,0 -9,4.037 -9,9c0,4.963 4.037,9 9,9c4.963,0 9,-4.037 9,-9v-11.019c1.674,1.261 3.748,2.019 6,2.019c0.676,0 1.344,-0.072 2,-0.207v-4.16c-0.646,0.231 -1.315,0.367 -2,0.367z" fill="url(#color-2_KeTtCQ_b-ZiV_gr2)"></path></g></g>
+</svg></span></a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+<defs><linearGradient x1="32" y1="10" x2="32" y2="54.751" gradientUnits="userSpaceOnUse" id="color-1_44112_gr1"><stop offset="0" stop-color="#00bfff"></stop><stop offset="1" stop-color="#0000cd"></stop></linearGradient><linearGradient x1="31.72" y1="24.25" x2="31.72" y2="39.252" gradientUnits="userSpaceOnUse" id="color-2_44112_gr2"><stop offset="0" stop-color="#00bfff"></stop><stop offset="1" stop-color="#0000cd"></stop></linearGradient><linearGradient x1="32.212" y1="10" x2="32.212" y2="54.751" gradientUnits="userSpaceOnUse" id="color-3_44112_gr3"><stop offset="0" stop-color="#00bfff"></stop><stop offset="1" stop-color="#0000cd"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(4,4)"><path d="M32,53.001c-6.358,0 -12.716,-0.195 -19.299,-0.584c-4.96,-0.293 -8.961,-4.242 -9.308,-9.187c-0.521,-7.452 -0.521,-15.009 -0.001,-22.46c0.348,-4.945 4.349,-8.895 9.309,-9.188c13.167,-0.778 25.433,-0.778 38.598,0c4.96,0.293 8.961,4.242 9.308,9.187c0.521,7.452 0.521,15.009 0.001,22.46c-0.348,4.945 -4.349,8.895 -9.309,9.188v0c-6.583,0.389 -12.941,0.584 -19.299,0.584zM51.182,50.421l0.059,0.998l-0.059,-0.998c3.959,-0.234 7.153,-3.386 7.431,-7.331c0.515,-7.358 0.515,-14.821 -0.001,-22.181c-0.276,-3.944 -3.471,-7.096 -7.43,-7.33c-13.088,-0.773 -25.275,-0.773 -38.363,0c-3.959,0.234 -7.153,3.386 -7.431,7.331c-0.515,7.358 -0.515,14.821 0.001,22.181c0.276,3.944 3.471,7.096 7.43,7.33c13.087,0.773 25.275,0.773 38.363,0z" fill="url(#color-1_44112_gr1)"></path><path d="M25,39.84v-15.68l13.44,7.84z" fill="url(#color-2_44112_gr2)"></path><path d="M24,41.581v-19.162l16.425,9.581zM26,25.901v12.197l10.456,-6.098z" fill="url(#color-3_44112_gr3)"></path></g></g>
+</svg></a>
+    </div>
+    </div>
+  </div>
+  <div class="center box">
+    <h3>DIRECCIÓN</h3>
+    <div class="content">
+      <div class="place">
+        <span class="fas fa-map-marker-alt"></span>
+        <span class="text">Poblado Simón Sarlat , Calle Benito Juaréz</span>
+      </div>
+      <div class="phone">
+        <span class="fas fa-phone-alt"></span>
+        <span class="text">+993 217 0072</span>
+      </div>
+      <div class="email">
+        <span class="fas fa-envelope"></span>
+        <span class="text">Princekerim123@gamail.com</span>
+      </div>
+    </div>
+  </div>
+  <div class="right box">
+    <h3>CONTÁCTENOS</h3>
+    <div class="content">
+      <form action="#">
+        <div class="email">
+          <div class="text">Email *</div>
+          <input type="email" required>
+        </div>
+        <div class="tel">
+          <div class="text">telefono *</div>
+          <input class="telefono" required>
+        </div>
+        <div class="msg">
+          <div class="text">Mensaje *</div>
+          <textarea rows="2" cols="25" required></textarea>
+        </div>
+        <div class="btn">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+     </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <center>
+      <span class="credit">Isaac <a href="#">Domínguez</a> | </span>
+      <span> "6.F"Semestre.</span>
+    </center>
+  </div>
+</footer>
+<!--fin de pie de pagina-->
+</body>
+</html>
